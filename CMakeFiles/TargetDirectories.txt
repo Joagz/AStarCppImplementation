@@ -1,0 +1,3 @@
+/home/joagz/Desktop/c++-astar/CMakeFiles/Astar.dir
+/home/joagz/Desktop/c++-astar/CMakeFiles/edit_cache.dir
+/home/joagz/Desktop/c++-astar/CMakeFiles/rebuild_cache.dir
