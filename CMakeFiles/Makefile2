@@ -64,18 +64,15 @@ CMAKE_BINARY_DIR = /home/joagz/Desktop/c++-astar
 
 # The main recursive "all" target.
 all: CMakeFiles/Astar.dir/all
-all: map/all
 all: astar/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: map/preinstall
 preinstall: astar/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Astar.dir/clean
-clean: map/clean
 clean: astar/clean
 .PHONY : clean
 
@@ -95,34 +92,18 @@ astar/clean: astar/CMakeFiles/astarpathfinder.dir/clean
 .PHONY : astar/clean
 
 #=============================================================================
-# Directory level rules for directory map
-
-# Recursive "all" directory target.
-map/all: map/CMakeFiles/map.dir/all
-.PHONY : map/all
-
-# Recursive "preinstall" directory target.
-map/preinstall:
-.PHONY : map/preinstall
-
-# Recursive "clean" directory target.
-map/clean: map/CMakeFiles/map.dir/clean
-.PHONY : map/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/Astar.dir
 
 # All Build rule for target.
-CMakeFiles/Astar.dir/all: map/CMakeFiles/map.dir/all
 CMakeFiles/Astar.dir/all: astar/CMakeFiles/astarpathfinder.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Astar.dir/build.make CMakeFiles/Astar.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Astar.dir/build.make CMakeFiles/Astar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/joagz/Desktop/c++-astar/CMakeFiles --progress-num=1,2,3 "Built target Astar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/joagz/Desktop/c++-astar/CMakeFiles --progress-num=1,2 "Built target Astar"
 .PHONY : CMakeFiles/Astar.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Astar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joagz/Desktop/c++-astar/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joagz/Desktop/c++-astar/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Astar.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joagz/Desktop/c++-astar/CMakeFiles 0
 .PHONY : CMakeFiles/Astar.dir/rule
@@ -137,44 +118,18 @@ CMakeFiles/Astar.dir/clean:
 .PHONY : CMakeFiles/Astar.dir/clean
 
 #=============================================================================
-# Target rules for target map/CMakeFiles/map.dir
-
-# All Build rule for target.
-map/CMakeFiles/map.dir/all:
-	$(MAKE) $(MAKESILENT) -f map/CMakeFiles/map.dir/build.make map/CMakeFiles/map.dir/depend
-	$(MAKE) $(MAKESILENT) -f map/CMakeFiles/map.dir/build.make map/CMakeFiles/map.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/joagz/Desktop/c++-astar/CMakeFiles --progress-num=8,9 "Built target map"
-.PHONY : map/CMakeFiles/map.dir/all
-
-# Build rule for subdir invocation for target.
-map/CMakeFiles/map.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joagz/Desktop/c++-astar/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 map/CMakeFiles/map.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joagz/Desktop/c++-astar/CMakeFiles 0
-.PHONY : map/CMakeFiles/map.dir/rule
-
-# Convenience name for target.
-map: map/CMakeFiles/map.dir/rule
-.PHONY : map
-
-# clean rule for target.
-map/CMakeFiles/map.dir/clean:
-	$(MAKE) $(MAKESILENT) -f map/CMakeFiles/map.dir/build.make map/CMakeFiles/map.dir/clean
-.PHONY : map/CMakeFiles/map.dir/clean
-
-#=============================================================================
 # Target rules for target astar/CMakeFiles/astarpathfinder.dir
 
 # All Build rule for target.
-astar/CMakeFiles/astarpathfinder.dir/all: map/CMakeFiles/map.dir/all
+astar/CMakeFiles/astarpathfinder.dir/all:
 	$(MAKE) $(MAKESILENT) -f astar/CMakeFiles/astarpathfinder.dir/build.make astar/CMakeFiles/astarpathfinder.dir/depend
 	$(MAKE) $(MAKESILENT) -f astar/CMakeFiles/astarpathfinder.dir/build.make astar/CMakeFiles/astarpathfinder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/joagz/Desktop/c++-astar/CMakeFiles --progress-num=4,5,6,7 "Built target astarpathfinder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/joagz/Desktop/c++-astar/CMakeFiles --progress-num=3,4,5,6,7 "Built target astarpathfinder"
 .PHONY : astar/CMakeFiles/astarpathfinder.dir/all
 
 # Build rule for subdir invocation for target.
 astar/CMakeFiles/astarpathfinder.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joagz/Desktop/c++-astar/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joagz/Desktop/c++-astar/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 astar/CMakeFiles/astarpathfinder.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joagz/Desktop/c++-astar/CMakeFiles 0
 .PHONY : astar/CMakeFiles/astarpathfinder.dir/rule

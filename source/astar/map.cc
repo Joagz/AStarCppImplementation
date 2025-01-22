@@ -1,4 +1,31 @@
 #include "map.hh"
+#include <iostream>
+
+int Map::transformPos(int pos)
+{
+    switch (pos)
+    {
+    case LEFT_POS:
+        return LEFT;
+    case RIGHT_POS:
+        return RIGHT;
+    case UPPER_POS:
+        return UPPER;
+    case LOWER_POS:
+        return LOWER;
+    case LEFTUPPER_POS:
+        return LEFTUPPER;
+    case RIGHTUPPER_POS:
+        return RIGHTUPPER;
+    case RIGHTLOWER_POS:
+        return RIGHTLOWER;
+    case LEFTLOWER_POS:
+        return LEFTLOWER;
+    default:
+        break;
+    }
+    return LEFT;
+}
 
 bool Map::checkNeighbor(int neighbor_pos, uint32_t x, uint32_t y)
 {
@@ -46,10 +73,15 @@ bool Map::checkNeighbor(int neighbor_pos, uint32_t x, uint32_t y)
 // Returns if the neighbor exists
 bool Map::getNeighbor(int neighbor_pos, uint32_t x, uint32_t y)
 {
-    return this->tiles != nullptr &&
-           this->size_x > 0 &&
-           this->size_y > 0 &&
-           checkNeighbor(neighbor_pos, x, y);
+    return checkNeighbor(neighbor_pos, x, y) && this->tiles[x][y];
+}
+
+void Map::getNeighbors(bool neighbors[8], uint32_t x, uint32_t y)
+{
+    for (int i = 0; i < 8; i++)
+    {
+        neighbors[i] = getNeighbor(i, x, y);
+    }
 }
 
 int Map::getNeighborX(int neighbor_pos, uint32_t x, uint32_t y)

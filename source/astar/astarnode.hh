@@ -1,7 +1,7 @@
 #ifndef ASTAR_NODE_H
 #define ASTAR_NODE_H
 
-#include "map/map.hh"
+#include <stdint.h>
 #include <math.h>
 
 #define HEURISTIC_MANHATTAN 0
@@ -11,20 +11,23 @@ class AStarNode
 {
 private:
     uint heuristic_type = HEURISTIC_EUCLIDEAN;
-    uint cost_to_node = 1; // if we suppose a fixed cost, this could be just 1
+    AStarNode *parent = NULL;
+
+public:
     uint32_t x;
     uint32_t y;
-    int f_cost;
-public:
+    int f_cost = std::numeric_limits<int>::max();
+    int g_cost = std::numeric_limits<int>::max();
+    int h_cost = std::numeric_limits<int>::max();
+
     AStarNode();
     AStarNode(uint32_t x, uint32_t y);
-    AStarNode(uint32_t x, uint32_t y, uint cost_to_node);
     ~AStarNode();
     void setHeuristic(int end_x, int end_y);
-    int getHeuristic();
-    int getX();
-    int getY();
-};
+    void setParent(AStarNode *p);
+    AStarNode *getParent();
 
+   
+};
 
 #endif

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/joagz/Desktop/c++-astar/source -I/home/joagz/Desktop/c++-astar/source/map
+CXX_INCLUDES = -I/home/joagz/Desktop/c++-astar/source
 
 CXX_FLAGS = 
 

@@ -1,9 +1,6 @@
 /home/joagz/Desktop/c++-astar/CMakeFiles/Astar.dir
 /home/joagz/Desktop/c++-astar/CMakeFiles/edit_cache.dir
 /home/joagz/Desktop/c++-astar/CMakeFiles/rebuild_cache.dir
-/home/joagz/Desktop/c++-astar/map/CMakeFiles/map.dir
-/home/joagz/Desktop/c++-astar/map/CMakeFiles/edit_cache.dir
-/home/joagz/Desktop/c++-astar/map/CMakeFiles/rebuild_cache.dir
 /home/joagz/Desktop/c++-astar/astar/CMakeFiles/astarpathfinder.dir
 /home/joagz/Desktop/c++-astar/astar/CMakeFiles/edit_cache.dir
 /home/joagz/Desktop/c++-astar/astar/CMakeFiles/rebuild_cache.dir

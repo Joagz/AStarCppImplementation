@@ -111,11 +111,26 @@ astar/CMakeFiles/astarpathfinder.dir/binheap.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/astarpathfinder.dir/binheap.cc.s"
 	cd /home/joagz/Desktop/c++-astar/astar && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joagz/Desktop/c++-astar/source/astar/binheap.cc -o CMakeFiles/astarpathfinder.dir/binheap.cc.s
 
+astar/CMakeFiles/astarpathfinder.dir/map.cc.o: astar/CMakeFiles/astarpathfinder.dir/flags.make
+astar/CMakeFiles/astarpathfinder.dir/map.cc.o: /home/joagz/Desktop/c++-astar/source/astar/map.cc
+astar/CMakeFiles/astarpathfinder.dir/map.cc.o: astar/CMakeFiles/astarpathfinder.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joagz/Desktop/c++-astar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object astar/CMakeFiles/astarpathfinder.dir/map.cc.o"
+	cd /home/joagz/Desktop/c++-astar/astar && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT astar/CMakeFiles/astarpathfinder.dir/map.cc.o -MF CMakeFiles/astarpathfinder.dir/map.cc.o.d -o CMakeFiles/astarpathfinder.dir/map.cc.o -c /home/joagz/Desktop/c++-astar/source/astar/map.cc
+
+astar/CMakeFiles/astarpathfinder.dir/map.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/astarpathfinder.dir/map.cc.i"
+	cd /home/joagz/Desktop/c++-astar/astar && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joagz/Desktop/c++-astar/source/astar/map.cc > CMakeFiles/astarpathfinder.dir/map.cc.i
+
+astar/CMakeFiles/astarpathfinder.dir/map.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/astarpathfinder.dir/map.cc.s"
+	cd /home/joagz/Desktop/c++-astar/astar && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joagz/Desktop/c++-astar/source/astar/map.cc -o CMakeFiles/astarpathfinder.dir/map.cc.s
+
 # Object files for target astarpathfinder
 astarpathfinder_OBJECTS = \
 "CMakeFiles/astarpathfinder.dir/astarpathfinder.cc.o" \
 "CMakeFiles/astarpathfinder.dir/astarnode.cc.o" \
-"CMakeFiles/astarpathfinder.dir/binheap.cc.o"
+"CMakeFiles/astarpathfinder.dir/binheap.cc.o" \
+"CMakeFiles/astarpathfinder.dir/map.cc.o"
 
 # External object files for target astarpathfinder
 astarpathfinder_EXTERNAL_OBJECTS =
@@ -123,9 +138,10 @@ astarpathfinder_EXTERNAL_OBJECTS =
 astar/libastarpathfinder.a: astar/CMakeFiles/astarpathfinder.dir/astarpathfinder.cc.o
 astar/libastarpathfinder.a: astar/CMakeFiles/astarpathfinder.dir/astarnode.cc.o
 astar/libastarpathfinder.a: astar/CMakeFiles/astarpathfinder.dir/binheap.cc.o
+astar/libastarpathfinder.a: astar/CMakeFiles/astarpathfinder.dir/map.cc.o
 astar/libastarpathfinder.a: astar/CMakeFiles/astarpathfinder.dir/build.make
 astar/libastarpathfinder.a: astar/CMakeFiles/astarpathfinder.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joagz/Desktop/c++-astar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libastarpathfinder.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joagz/Desktop/c++-astar/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libastarpathfinder.a"
 	cd /home/joagz/Desktop/c++-astar/astar && $(CMAKE_COMMAND) -P CMakeFiles/astarpathfinder.dir/cmake_clean_target.cmake
 	cd /home/joagz/Desktop/c++-astar/astar && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/astarpathfinder.dir/link.txt --verbose=$(VERBOSE)
 

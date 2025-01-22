@@ -13,6 +13,15 @@
 #define LEFTLOWER 0b1001
 #define RIGHTLOWER 0b1010
 
+#define LEFT_POS 0
+#define RIGHT_POS 1
+#define UPPER_POS 2
+#define LOWER_POS 3
+#define LEFTUPPER_POS 4
+#define RIGHTUPPER_POS 5
+#define LEFTLOWER_POS 6
+#define RIGHTLOWER_POS 7
+
 #define MAP_X 100
 #define MAP_Y 100
 
@@ -34,13 +43,15 @@ public:
 
     bool getTile(uint32_t x, uint32_t y);
 
+    void getNeighbors(bool neighbors[8], uint32_t x, uint32_t y);
     bool getNeighbor(int neighbor_pos, uint32_t x, uint32_t y);
     int getNeighborX(int neighbor_pos, uint32_t x, uint32_t y);
     int getNeighborY(int neighbor_pos, uint32_t x, uint32_t y);
 
     int getSizeX();
     int getSizeY();
-};
 
+    int transformPos(int pos);
+};
 
 #endif

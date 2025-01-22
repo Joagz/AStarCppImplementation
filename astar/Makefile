@@ -202,6 +202,30 @@ binheap.cc.s:
 	cd /home/joagz/Desktop/c++-astar && $(MAKE) $(MAKESILENT) -f astar/CMakeFiles/astarpathfinder.dir/build.make astar/CMakeFiles/astarpathfinder.dir/binheap.cc.s
 .PHONY : binheap.cc.s
 
+map.o: map.cc.o
+.PHONY : map.o
+
+# target to build an object file
+map.cc.o:
+	cd /home/joagz/Desktop/c++-astar && $(MAKE) $(MAKESILENT) -f astar/CMakeFiles/astarpathfinder.dir/build.make astar/CMakeFiles/astarpathfinder.dir/map.cc.o
+.PHONY : map.cc.o
+
+map.i: map.cc.i
+.PHONY : map.i
+
+# target to preprocess a source file
+map.cc.i:
+	cd /home/joagz/Desktop/c++-astar && $(MAKE) $(MAKESILENT) -f astar/CMakeFiles/astarpathfinder.dir/build.make astar/CMakeFiles/astarpathfinder.dir/map.cc.i
+.PHONY : map.cc.i
+
+map.s: map.cc.s
+.PHONY : map.s
+
+# target to generate assembly for a file
+map.cc.s:
+	cd /home/joagz/Desktop/c++-astar && $(MAKE) $(MAKESILENT) -f astar/CMakeFiles/astarpathfinder.dir/build.make astar/CMakeFiles/astarpathfinder.dir/map.cc.s
+.PHONY : map.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -220,6 +244,9 @@ help:
 	@echo "... binheap.o"
 	@echo "... binheap.i"
 	@echo "... binheap.s"
+	@echo "... map.o"
+	@echo "... map.i"
+	@echo "... map.s"
 .PHONY : help
 
 

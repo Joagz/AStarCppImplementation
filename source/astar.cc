@@ -1,29 +1,28 @@
 #include "astar/astarpathfinder.hh"
 #include <iostream>
+#include <random>
 
 int main()
 {
-    binheap heap = binheap();
-    AStarNode target = AStarNode(5, 5);
-
-    for (int i = 0; i < 10; ++i)
+    Map map = Map();
+    map.lockTile(1,1);
+    map.lockTile(1,0);
+    map.lockTile(0,1);
+    for (size_t i = 0; i < map.getSizeY(); i++)
     {
-        for (int j = 0; j < 10; ++j)
+        for (size_t j = 0; j < map.getSizeX(); j++)
         {
-            AStarNode node(i, j);
-            node.setHeuristic(target.getX(), target.getY());
-            heap.add(node);
+            printf("%d", map.getTile(j,i));
         }
+        printf("\n");
     }
+    
+    AStarPathfinder pathfinder = AStarPathfinder(map);
 
-    int k = heap.getSize();
-    for (int i = 0; i < k; i++)
-    {
-        AStarNode *node = ((AStarNode *)(heap.remove(0)));
-        std::cout << node->getX() << "," << node->getY() << " | " << node->getHeuristic() << std::endl;
-    }
+    AStarNode *start = new AStarNode(0, 0);
+    AStarNode *end = new AStarNode(5,5);
 
-    std::cout << k << std::endl;
+    pathfinder.calculate(start, end);
 
     return 0;
 }

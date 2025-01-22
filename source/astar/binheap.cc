@@ -2,7 +2,7 @@
 
 void binheap::exch(int i, int j)
 {
-    AStarNode temp = this->el[i];
+    AStarNode* temp = this->el[i];
     this->el[i] = this->el[j];
     this->el[j] = temp;
 }
@@ -14,13 +14,13 @@ binheap::binheap()
 
 bool binheap::compare_astar_node(AStarNode *a, AStarNode *b)
 {
-    return a->getHeuristic() <
-           b->getHeuristic();
+    return a->f_cost <
+           b->f_cost;
 }
 
 binheap::~binheap() {}
 
-void binheap::add(AStarNode ptr)
+void binheap::add(AStarNode* ptr)
 {
     if (this->size >= BIN_HEAP_MAX_SIZE)
         return;
@@ -39,15 +39,12 @@ int binheap::swim(int index)
 
     int temp = index;
     int parent = (index - 1) / 2;
-    while (parent >= 0 && compare_astar_node(&this->el[temp], &this->el[parent]))
+    while (parent >= 0 && compare_astar_node(this->el[temp], this->el[parent]))
     {
         exch(parent, temp);
         temp = parent;
         parent = (parent - 1) / 2;
     }
-
-    this->root = this->el[0];
-    this->tail = this->el[this->size - 1];
 
     return temp;
 }
@@ -65,9 +62,9 @@ int binheap::sink(int index)
     {
         int smallest = index;
 
-        if (leftchild < this->size && compare_astar_node(&this->el[leftchild], &this->el[smallest]))
+        if (leftchild < this->size && compare_astar_node(this->el[leftchild], this->el[smallest]))
             smallest = leftchild;
-        if (rightchild < this->size && compare_astar_node(&this->el[rightchild], &this->el[smallest]))
+        if (rightchild < this->size && compare_astar_node(this->el[rightchild], this->el[smallest]))
             smallest = rightchild;
 
         // If no swap needed, break
@@ -80,9 +77,6 @@ int binheap::sink(int index)
         rightchild = 2 * (index + 1);
     }
 
-    this->root = this->el[0];
-    this->tail = this->el[this->size - 1];
-
     return temp;
 }
 
@@ -90,17 +84,17 @@ AStarNode *binheap::get(int index)
 {
     if (index < 0 || index >= this->size)
         return nullptr;
-    return &this->el[index];
+    return this->el[index];
 }
 
 AStarNode *binheap::getRoot()
 {
-    return &this->el[0];
+    return this->el[0];
 }
 
 AStarNode *binheap::getTail()
 {
-    return &this->el[this->size - 1];
+    return this->el[this->size - 1];
 }
 
 AStarNode *binheap::remove(int index)
@@ -109,9 +103,13 @@ AStarNode *binheap::remove(int index)
         return nullptr;
 
     exch(index, this->size - 1);
-    AStarNode *removed = &this->el[this->size - 1];
+    AStarNode *removed = this->el[this->size - 1];
     this->size--;
 
     sink(index);
     return removed;
+}
+
+bool binheap::isEmpty() {
+    return this->size <= 0;
 }

@@ -12,7 +12,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
   "/home/joagz/Desktop/c++-astar/source/CMakeLists.txt"
   "/home/joagz/Desktop/c++-astar/source/astar/CMakeLists.txt"
-  "/home/joagz/Desktop/c++-astar/source/map/CMakeLists.txt"
   "/usr/share/cmake-3.28/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake"
@@ -42,13 +41,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "map/CMakeFiles/CMakeDirectoryInformation.cmake"
   "astar/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Astar.dir/DependInfo.cmake"
-  "map/CMakeFiles/map.dir/DependInfo.cmake"
   "astar/CMakeFiles/astarpathfinder.dir/DependInfo.cmake"
   )

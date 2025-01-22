@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/Astar.dir/astar.cc.o CMakeFiles/Astar.dir/astar/astarnode.cc.o -o Astar  astar/libastarpathfinder.a map/libmap.a 
+/usr/bin/c++ CMakeFiles/Astar.dir/astar.cc.o -o Astar  astar/libastarpathfinder.a 

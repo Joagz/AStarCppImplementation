@@ -1,10 +1,8 @@
 #ifndef ASTAR_PATHFINDER_H
 #define ASTAR_PATHFINDER_H
 
-#include "map/map.hh"
-#include "binheap.cc"
-#include "astarnode.hh"
-#include <vector>
+#include "map.hh"
+#include "binheap.hh"
 
 using namespace std;
 
@@ -12,13 +10,15 @@ class AStarPathfinder
 {
 private:
     Map map;
-    vector<AStarNode> open_list;
-    vector<AStarNode> closed_list;
+    binheap open_list;
+    binheap closed_list;
 
 public:
+    AStarPathfinder();
     AStarPathfinder(Map map);
     ~AStarPathfinder();
-    void calculate(uint32_t start_x, uint32_t start_y, uint32_t end_x, uint32_t end_y);
+    void reconstructPath(AStarNode *goal);
+    void calculate(AStarNode *start, AStarNode *end);
 };
 
 #endif
