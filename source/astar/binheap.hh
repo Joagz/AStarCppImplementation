@@ -8,8 +8,7 @@
 #include "astarnode.hh"
 #include <vector>
 
-#define BIN_HEAP_MAX_SIZE 50
-#define BIN_HEAP_MAX_ELEMENT_SIZE 512
+#define BIN_HEAP_MAX_SIZE 1000
 
 using namespace std;
 

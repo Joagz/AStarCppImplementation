@@ -16,11 +16,14 @@ int main()
         }
     }
 
-    for (int i = 0; i < heap.getSize(); i++)
+    int k = heap.getSize();
+    for (int i = 0; i < k; i++)
     {
         AStarNode *node = ((AStarNode *)(heap.remove(0)));
         std::cout << node->getX() << "," << node->getY() << " | " << node->getHeuristic() << std::endl;
     }
+
+    std::cout << k << std::endl;
 
     return 0;
 }
