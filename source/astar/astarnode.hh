@@ -16,6 +16,7 @@ private:
     uint32_t y;
     int f_cost;
 public:
+    AStarNode();
     AStarNode(uint32_t x, uint32_t y);
     AStarNode(uint32_t x, uint32_t y, uint cost_to_node);
     ~AStarNode();

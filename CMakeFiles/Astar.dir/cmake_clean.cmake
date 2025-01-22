@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "Astar.pdb"
   "CMakeFiles/Astar.dir/astar.cc.o"
   "CMakeFiles/Astar.dir/astar.cc.o.d"
+  "CMakeFiles/Astar.dir/astar/astarnode.cc.o"
+  "CMakeFiles/Astar.dir/astar/astarnode.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

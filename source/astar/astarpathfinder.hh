@@ -2,6 +2,7 @@
 #define ASTAR_PATHFINDER_H
 
 #include "map/map.hh"
+#include "binheap.cc"
 #include "astarnode.hh"
 #include <vector>
 

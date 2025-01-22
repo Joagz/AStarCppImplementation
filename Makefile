@@ -129,6 +129,32 @@ Astar/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Astar.dir/build.make CMakeFiles/Astar.dir/build
 .PHONY : Astar/fast
 
+#=============================================================================
+# Target rules for targets named map
+
+# Build rule for target.
+map: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 map
+.PHONY : map
+
+# fast build rule for target.
+map/fast:
+	$(MAKE) $(MAKESILENT) -f map/CMakeFiles/map.dir/build.make map/CMakeFiles/map.dir/build
+.PHONY : map/fast
+
+#=============================================================================
+# Target rules for targets named astarpathfinder
+
+# Build rule for target.
+astarpathfinder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 astarpathfinder
+.PHONY : astarpathfinder
+
+# fast build rule for target.
+astarpathfinder/fast:
+	$(MAKE) $(MAKESILENT) -f astar/CMakeFiles/astarpathfinder.dir/build.make astar/CMakeFiles/astarpathfinder.dir/build
+.PHONY : astarpathfinder/fast
+
 astar.o: astar.cc.o
 .PHONY : astar.o
 
@@ -153,6 +179,30 @@ astar.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Astar.dir/build.make CMakeFiles/Astar.dir/astar.cc.s
 .PHONY : astar.cc.s
 
+astar/astarnode.o: astar/astarnode.cc.o
+.PHONY : astar/astarnode.o
+
+# target to build an object file
+astar/astarnode.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Astar.dir/build.make CMakeFiles/Astar.dir/astar/astarnode.cc.o
+.PHONY : astar/astarnode.cc.o
+
+astar/astarnode.i: astar/astarnode.cc.i
+.PHONY : astar/astarnode.i
+
+# target to preprocess a source file
+astar/astarnode.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Astar.dir/build.make CMakeFiles/Astar.dir/astar/astarnode.cc.i
+.PHONY : astar/astarnode.cc.i
+
+astar/astarnode.s: astar/astarnode.cc.s
+.PHONY : astar/astarnode.s
+
+# target to generate assembly for a file
+astar/astarnode.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Astar.dir/build.make CMakeFiles/Astar.dir/astar/astarnode.cc.s
+.PHONY : astar/astarnode.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +212,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Astar"
+	@echo "... astarpathfinder"
+	@echo "... map"
 	@echo "... astar.o"
 	@echo "... astar.i"
 	@echo "... astar.s"
+	@echo "... astar/astarnode.o"
+	@echo "... astar/astarnode.i"
+	@echo "... astar/astarnode.s"
 .PHONY : help
 
 

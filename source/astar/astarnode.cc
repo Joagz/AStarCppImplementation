@@ -13,7 +13,16 @@ AStarNode::AStarNode(uint32_t x, uint32_t y, uint cost_to_node)
     this->cost_to_node = cost_to_node;
 }
 
-AStarNode::~AStarNode() {}
+AStarNode::AStarNode()
+{
+    this->x = 0;
+    this->y = 0;
+    this->f_cost = 0;
+}
+AStarNode::~AStarNode()
+{
+}
+
 
 int AStarNode::getX()
 {

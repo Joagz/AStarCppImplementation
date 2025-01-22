@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/joagz/Desktop/c++-astar/source/astar.cc" "CMakeFiles/Astar.dir/astar.cc.o" "gcc" "CMakeFiles/Astar.dir/astar.cc.o.d"
+  "/home/joagz/Desktop/c++-astar/source/astar/astarnode.cc" "CMakeFiles/Astar.dir/astar/astarnode.cc.o" "gcc" "CMakeFiles/Astar.dir/astar/astarnode.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

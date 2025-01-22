@@ -1,0 +1,2 @@
+/usr/bin/ar qc libastarpathfinder.a CMakeFiles/astarpathfinder.dir/astarpathfinder.cc.o CMakeFiles/astarpathfinder.dir/astarnode.cc.o CMakeFiles/astarpathfinder.dir/binheap.cc.o
+/usr/bin/ranlib libastarpathfinder.a
