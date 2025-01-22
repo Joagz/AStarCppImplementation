@@ -111,16 +111,13 @@ int Map::getSizeY()
     return this->size_y;
 }
 
-Map::Map(uint32_t size_x, uint32_t size_y)
+Map::Map()
 {
-    this->size_x = size_x;
-    this->size_y = size_y;
-
-    this->tiles = (bool **)calloc(size_x, sizeof(bool *));
+    this->size_x = MAP_X;
+    this->size_y = MAP_Y;
 
     for (int j = 0; j < size_x; j++)
     {
-        this->tiles[j] = (bool *)calloc(size_y, sizeof(bool));
         for (int i = 0; i < size_y; i++)
         {
             this->tiles[j][i] = true;

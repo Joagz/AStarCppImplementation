@@ -13,12 +13,15 @@
 #define LEFTLOWER 0b1001
 #define RIGHTLOWER 0b1010
 
+#define MAP_X 100
+#define MAP_Y 100
+
 class Map
 {
 private:
     uint32_t size_x;
     uint32_t size_y;
-    bool **tiles;
+    bool tiles[MAP_X][MAP_Y] = {};
     bool checkNeighbor(int neighbor_pos, uint32_t x, uint32_t y);
 
 public:
